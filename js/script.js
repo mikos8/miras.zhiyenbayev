@@ -26,7 +26,10 @@ btntabEdu.addEventListener('click', () => {
 
 // portfolio section
 document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('view-project-btn')) {
+    if (
+        e.target.classList.contains('view-project-btn') ||
+        e.target.classList.contains('img-thumbnail')
+    ) {
         togglePortfolioPopup();
         portfolioItemDetail(e.target.parentElement);
     }
